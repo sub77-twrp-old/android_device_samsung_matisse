@@ -22,7 +22,7 @@ const char *mr_init_devices[] =
     "/sys/devices/virtual/misc/uinput",
     "/sys/devices/virtual/input*",
     //"/sys/devices/f9927000.i2c/i2c-5/5-0038/input*",
-	"/sys/devices/f9927000.i2c/i2c-5/5-004a/input*",
+    "/sys/devices/f9927000.i2c/i2c-5/5-004a/input*",
 
 	// For adb
     "/sys/devices/virtual/tty/ptmx",
