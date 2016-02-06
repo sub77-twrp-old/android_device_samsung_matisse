@@ -15,4 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_matissewifi.mk
+    $(LOCAL_DIR)/kernel_matisse.mk \
+    $(LOCAL_DIR)/multirom_matisse.mk \
+    $(LOCAL_DIR)/omni_matisse.mk 
+

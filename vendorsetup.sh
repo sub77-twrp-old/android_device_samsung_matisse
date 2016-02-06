@@ -13,5 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+add_lunch_combo kernel_matisse-eng        # BUILD INLINE KERNEL
+add_lunch_combo multirom_matisse-eng      # BUILD MULTIROM TWRP
+add_lunch_combo omni_matisse-eng          # BUILD TWRP
+add_lunch_combo patch_matisse-eng         # GIT AM
 
-add_lunch_combo omni_matissewifi-eng
+

@@ -17,28 +17,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
-LOCAL_PATH := device/samsung/matissewifi
+LOCAL_PATH := device/samsung/matisse
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+BOARD_KERNEL_SEPARATED_DT := true
+TARGET_KERNEL_CONFIG := twrp_msm8226_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := twrp_matisse_defconfig
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
-    $(LOCAL_PATH)/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
-# Charger
 PRODUCT_PACKAGES += charger charger_res_images
 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0
-    persist.sys.usb.config=mtp
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 persist.sys.usb.config=mtp
 
-PRODUCT_DEVICE := matissewifi
-#PRODUCT_MODEL := SM-T5XX
-PRODUCT_NAME := omni_matissewifi
+PRODUCT_DEVICE := matisse
 PRODUCT_BRAND := SAMSUNG
 PRODUCT_MANUFACTURER := SAMSUNG
+PRODUCT_NAME := kernel_matisse
