@@ -18,4 +18,3 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/kernel_matisse.mk \
     $(LOCAL_DIR)/multirom_matisse.mk \
     $(LOCAL_DIR)/omni_matisse.mk 
-
