@@ -26,17 +26,6 @@ else
 endif
 
 PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
-PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
-
-PRODUCT_PACKAGES += charger charger_res_images
-
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 persist.sys.usb.config=mtp
-
-PRODUCT_DEVICE := matisse
-PRODUCT_BRAND := SAMSUNG
-PRODUCT_MANUFACTURER := SAMSUNG
-
-PRODUCT_NAME := multirom_matisse
 
 # MultiROM config
 TARGET_RECOVERY_IS_MULTIROM := true
@@ -64,3 +53,8 @@ MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_CONTINUOUS_FB_UPDATE := true
 MR_DEVICE_HOOKS := device/samsung/matisse/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 3
+
+PRODUCT_NAME := multirom_matisse
+PRODUCT_DEVICE := matisse
+PRODUCT_BRAND := SAMSUNG
+PRODUCT_MANUFACTURER := SAMSUNG

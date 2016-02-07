@@ -26,13 +26,9 @@ else
 endif
 
 PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
-PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
-PRODUCT_PACKAGES += charger charger_res_images
-
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 persist.sys.usb.config=mtp
-
+PRODUCT_NAME := omni_matisse
 PRODUCT_DEVICE := matisse
 PRODUCT_BRAND := SAMSUNG
 PRODUCT_MANUFACTURER := SAMSUNG
-PRODUCT_NAME := omni_matisse
+
